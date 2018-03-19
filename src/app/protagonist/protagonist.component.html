@@ -1,15 +1,12 @@
 <div>
   <h3>Link</h3>
-  <!--<p>Health:{{states$.heroHealthPoints}}</p>
-  <p>Attack:{{states$.heroAttackPoints}}</p>
-  <p>Armor:{{states$.heroArmor}}</p>-->
 
   <div>
-    <p>Health:{{states$.heroHealthPoints}}</p>
-    <p>Attack:{{states$.heroAttackPoints}}</p>
-    <p>Armor:{{states$.heroArmor}}</p>
+    <p>Health:{{states$.hero.hp}}</p>
+    <p>Attack:{{states$.hero.ap}}</p>
+    <p>Armor:{{states$.hero.st}}</p>
   </div>
 
   <button (click)="heroAttack()">Hero attack</button>
-  <button (click)="heroDefend()">Hero defend</button>
+  <!--<button (click)="heroDefend()">Hero defend</button>-->
 </div>

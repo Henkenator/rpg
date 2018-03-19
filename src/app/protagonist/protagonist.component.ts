@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {select, Store} from '@ngrx/store';
-import {DEFEND, HERO_ATTACK} from '../reducers';
+import {ATTACK, DEFEND} from '../reducers';
 
 @Component({
   selector: 'app-protagonist',
@@ -12,9 +12,6 @@ export class ProtagonistComponent implements OnInit {
   states$;
 
   constructor(private store: Store<any>) {
-    //this.states$ = store.pipe(select('attack'));
-    //this.states$.subscribe();
-    //console.log(this.states$);
     store.pipe(select('attack'))
       .subscribe(state => {
         this.states$ = state;
@@ -25,7 +22,7 @@ export class ProtagonistComponent implements OnInit {
   }
 
   heroAttack() {
-    this.store.dispatch({type: HERO_ATTACK});
+    this.store.dispatch({type: ATTACK, payload: {attacker: 'hero', defender: 'enemy'}});
   }
 
   heroDefend() {

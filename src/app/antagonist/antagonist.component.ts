@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {select, Store} from '@ngrx/store';
-import {ENEMY_ATTACK} from '../reducers';
+import {ATTACK} from '../reducers';
 
 @Component({
   selector: 'app-antagonist',
@@ -23,7 +23,7 @@ export class AntagonistComponent implements OnInit {
   }
 
   enemyAttack() {
-    this.store.dispatch({type: ENEMY_ATTACK});
+    this.store.dispatch({type: ATTACK, payload: {attacker: 'enemy', defender: 'hero'}});
   }
 
 }

@@ -2,9 +2,9 @@
   <h3>Ganon</h3>
 
   <div>
-    <p>Health:{{states$.enemyHealthPoints}}</p>
-    <p>Attack:{{states$.enemyAttackPoints}}</p>
-    <p>Armor:{{states$.enemyArmor}}</p>
+    <p>Health:{{states$.enemy.hp}}</p>
+    <p>Attack:{{states$.enemy.ap}}</p>
+    <p>Armor:{{states$.enemy.st}}</p>
   </div>
 
   <button (click)="enemyAttack()">Enemy attack</button>
